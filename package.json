@@ -4,6 +4,7 @@
   "description": "A project to learn GitHub concepts",
   "main": "script.js",
   "scripts": {
+    "build": "echo 'No build step needed'",
     "test": "node tests/script.test.js",
     "format": "prettier --write \"**/*.{js,html,css}\""
   },
