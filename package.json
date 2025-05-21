@@ -1,0 +1,13 @@
+{
+  "name": "github-learning-project",
+  "version": "1.0.0",
+  "description": "A project to learn GitHub concepts",
+  "main": "script.js",
+  "scripts": {
+    "test": "node tests/script.test.js",
+    "format": "prettier --write \"**/*.{js,html,css}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+} 
