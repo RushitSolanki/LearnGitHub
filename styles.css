@@ -84,4 +84,38 @@ footer {
     text-align: center;
     margin-top: 3rem;
     color: #7f8c8d;
+}
+
+.commit-history {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.commit-history h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.commit-list {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.commit-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.commit-item:last-child {
+    border-bottom: none;
+}
+
+.commit-item .timestamp {
+    color: #7f8c8d;
+    font-size: 0.8rem;
 } 
