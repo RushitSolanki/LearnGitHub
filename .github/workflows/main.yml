@@ -62,6 +62,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
