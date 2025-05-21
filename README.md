@@ -1,3 +1,5 @@
+![Build and Deploy](https://github.com/RushitSolanki/LearnGitHub/actions/workflows/main.yml/badge.svg?branch=main)
+
 # GitHub Learning Project
 
 This project is designed to help you learn GitHub through practical experience. We'll build a simple web application while learning essential GitHub concepts.
