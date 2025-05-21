@@ -45,26 +45,32 @@ jobs:
       - name: Check formatting
         run: npx prettier --check "**/*.{js,css}"
 
-  deploy:
+  build:
     needs: [test, lint]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Setup Pages
         uses: actions/configure-pages@v3
-
+        with:
+          enablement: true
+      
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: '.'
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
